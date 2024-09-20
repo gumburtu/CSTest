@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="outer-container">
+        <div class="container">
+            <div class="info">
+                <h2>How to Play:</h2>
+                <p>Welcome to the Number Guessing Game! Here’s how you can play:</p>
+                <p>Select a Difficulty Level:</p>
+                <ul>
+                    <li><strong>Easy:</strong> Guess a number between 1 and 10. You have 3 guesses.</li>
+                    <li><strong>Medium:</strong> Guess a number between 1 and 100. You have 5 guesses.</li>
+                    <li><strong>Hard:</strong> Guess a number between 1 and 1000. You have 10 guesses.</li>
+                </ul>
+                <p><strong>Guessing Rules:</strong></p>
+                <ul>
+                    <li>Enter a number in the input field and click "Submit Guess".</li>
+                    <li>If your guess is correct and you have guesses left, you will see a "Congratulations!" message.</li>
+                    <li>If you use all your guesses without finding the correct number, you will see a "Game Over" message.</li>
+                    <li>The game will alert you if you enter a number that you have already guessed. Please try a different number.</li>
+                </ul>
+                <p><strong>Additional Notes:</strong></p>
+                <ul>
+                    <li><strong>Previous Guesses:</strong> The game keeps track of all your previous guesses to ensure you do not repeat any.</li>
+                    <li><strong>Duplicate Guesses:</strong> If you enter a number that you’ve already guessed, the game will warn you and ask you to enter a different number.</li>
+                </ul>
+                <p><strong>Good luck, and have fun!</strong></p>
+            </div>
+            <div class="game-container">
+                <h1>Number Guessing Game</h1>
+                <p>We have selected a random number based on the difficulty level. See if you can guess it in the allowed number of turns or fewer. We'll tell you if your guess was too high or too low.</p> 
+                <br>
+                <div class="difficulty">
+                    <label>
+                        <input type="radio" name="difficulty" value="easy" checked /> Easy (1-10)
+                    </label>
+                    <label>
+                        <input type="radio" name="difficulty" value="medium" /> Medium (1-100)
+                    </label>
+                    <label>
+                        <input type="radio" name="difficulty" value="hard" /> Hard (1-1000)
+                    </label>
+                </div>
+                <br>
+                <div class="form">
+                    <label for="guessField">Enter a guess: </label>
+                    <input type="number" min="1" max="1000" required id="guessField" class="guessField" />
+                    <input type="submit" value="Submit Guess" class="button guessSubmit" />
+                    <div id="remainingGuesses" class="remainingGuesses">Remaining Guesses: 10</div>
+                    <button class="button new-game">Start New Game</button>
+                </div>
+                <div class="resultParas">
+                    <p class="guesses"></p>
+                    <p class="lastResult"></p>
+                    <p class="lowOrHi"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
